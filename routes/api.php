@@ -46,6 +46,9 @@ use App\Http\Controllers\UserController;
 Route::get('/wer', function () {
     echo 'heyhey';
 });
-Route::post('/register', [UserController::class, 'createUser']);
+Route::post('/register', [UserController::class, 'register']);
 
 Route::post('/login', [UserController::class, 'loginUser']);
+
+Route::post('/auth/login', [AuthController::class, 'login']);
+Route::post('/auth/register', [AuthController::class, 'register']);

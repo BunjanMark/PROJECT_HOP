@@ -9,11 +9,15 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use App\http\Controllers\Controller;
 use App\Models\User;
-
+ 
+ 
+ 
+use App\Http\Controllers\Str;
+ 
 class UserController extends Controller
 {
 
-    public function createUser(Request $request)
+    public function register(Request $request)
     {
         try {
             $validateUser = Validator::make(
